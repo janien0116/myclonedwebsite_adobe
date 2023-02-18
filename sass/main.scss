@@ -1,0 +1,33 @@
+$enable-transitions: false;
+$secondary: #8b8b8b;
+$navbar-light-brand-hover-color: red;
+$navbar-light-toggler-border-color: white;
+$accordion-bg: white;
+$accordion-border-color: none;
+$accordion-button-padding-y: 12px;
+$accordion-button-active-bg: white;
+$accordion-button-focus-box-shadow: white;
+$accordion-icon-active-color: black;
+$accordion-icon-width: 12px;
+$accordion-button-active-color: #2c2c2c;
+$offcanvas-horizontal-width: 96vw;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 300px,
+  md: 600px,
+  lg: 900px,
+  xl: 1200px
+);
+$modal-backdrop-opacity: .9;
+@media screen and (min-width: 900px){
+  .accordion-button::after{
+      display: none;
+  }
+  #btn-acc-nav1::after, #btn-acc-nav2::after, #btn-acc-nav3::after, #btn-acc-nav4::after, #change-region::after{
+    display: block;
+  }
+}
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

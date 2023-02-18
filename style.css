@@ -1,0 +1,493 @@
+/* Font Styles and Declaration */
+@font-face {
+    font-family: adobe-clean;
+    src: url(AdobeClean/AdobeClean-SemiCn.otf);
+}
+@font-face {
+    font-family: adobe-clean-reg;
+    src: url(AdobeClean/AdobeClean-Regular.otf);
+}
+@font-face {
+    font-family: adobe-clean-bold;
+    src: url(AdobeClean/AdobeClean-Bold.otf);
+}
+@font-face {
+    font-family: adobe-clean-light;
+    src: url(AdobeClean/AdobeClean-Light.otf);
+}
+@font-face {
+    font-family: adobe-clean-semibold;
+    src: url(AdobeClean/AdobeClean-BoldSemiCn.otf);
+}
+.fs-xxs{
+    font-size: 12px;
+    color:#505050;
+}
+.fs-xsmall{
+    font-family: 'adobe-clean-reg', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #656565;
+    font-size: 12px;
+    line-height: 15px;
+}
+.fs-small{
+    font-family: 'adobe-clean', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14.5px;
+}
+.fs-small2{
+    font-family: 'adobe-clean', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14.5px;
+}
+.fs-bold{
+    font-family: 'adobe-clean-bold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+.fs-bold2{
+    font-family: 'adobe-clean-bold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+.fs-semibold{
+    font-family: 'adobe-clean-semibold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14.5px;
+    color: #505050 !important;
+    font-weight: bold;
+}
+.fs-semibold2{
+    font-family: 'adobe-clean-semibold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14.5px;
+    color: white;
+    text-decoration: underline;
+}
+
+/* General Element Styles */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'adobe-clean', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+    color: #2c2c2c;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+.container-fluid{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #2c2c2c;
+}
+li{
+    list-style: none;
+}
+
+/* Navbar Styles */
+.navbar{
+    padding: 12px 4px 12px 4px;
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    transition: transform 0.3s ease;
+    visibility: visible;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+.navbar.scrolling-down{
+    transform: translateY(-65px);
+}
+.navbar.scrolling-up{
+    visibility: visible;
+}
+.navbar-brand{
+    font-family: 'adobe-clean-bold', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color:red;
+    padding-top: 5px;
+}
+.navbar-brand label{
+    cursor: pointer;
+}
+#text-logo1, #text-logo2{
+    margin-left: 6px;
+}
+#img-logo1, #img-logo2{
+    margin-bottom: 4px;
+}
+#brand-logo2{
+    display: none;
+}
+.nav-searchbar{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 65px;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    padding: 20px 95px 20px 95px;
+    display: none;
+}
+.nav-searchbar.active {
+    display: block;
+}
+#nav-form-control{
+    box-shadow: none;
+}
+.form-control{
+    border-radius: 3px;
+    position: relative;
+    background-image: url("images/icons8-search-48.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+.navbar-nav{
+    margin-left: 4px;
+    padding-bottom: 3px;
+}
+.navbar-toggler-icon{
+    transform: scale(0.75) scaleX(0.75);
+    color: black;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.fa-magnifying-glass{
+    font-size: 16px;
+}
+
+/* Navbar Accordion Styles */
+#first-child-label2{
+    display: none;
+}
+.accordion-button::after{
+    transition: 0.1s ease-in-out;
+}
+#collapseDiv1, #collapseDiv2, #collapseDiv3, #collapseDiv4{
+    z-index: 999;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    position: absolute;
+    border-top: 1px solid rgb(222, 204, 215, 0.3);
+    background-color: white;
+}
+#first-card{
+    padding: 30px 30px 28px 35px;
+    background-color: black;
+    color: white !important;
+}
+#second-card{
+    padding: 35px 25px 28px 29px;
+}
+#second-card p{
+    padding-top: 15px;
+    margin-bottom: 11px;
+    font-size: 12px;
+}
+#third-card{
+    padding: 32px 30px 28px 33px;
+    background-color: black;
+    color: white !important;
+}
+#acloud-logo{
+    margin-right: 12px;
+}
+.btn-outline-secondary{
+    border: 2px solid black !important;
+    padding: 3px 13px 2px 13px;
+    color: #2c2c2c;
+    margin: 10px 0 16px 0;
+}
+.btn-outline-secondary:hover{
+    background-color: black !important;
+    color: white !important;
+}
+
+/* Navbar Offcanvas Styles */
+.offcanvas {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+}
+.hide{
+    display: none;
+}
+.form-searchbar {
+    margin-right: 20px;
+    margin-left: 20px;
+    display: none;
+}
+.form-control{
+    height: 36px;
+    font-family: 'adobe-clean-light';
+    padding-left: 10px;
+}
+
+/* Main Div Top Styles */
+.main-div-top{
+    height: fit-content;
+    position: relative;
+}
+.main-div-media{
+    transform: translateY(65px);
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+}
+.main-div-media video{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transform: scale(1.16) translateY(39px);
+}
+video::-webkit-media-controls {
+    display: none !important;
+}
+video::-moz-controls {
+    display: none !important;
+}
+.main-div-text{
+    color: black;
+    width: 633px;
+    height: auto;
+    transform: translateY(100px);
+    padding: 174px 0px 355px 56px;
+    position: relative;
+}
+.main-div-text h1{
+    font-size: 42px;
+    font-family: 'adobe-clean-bold';
+    line-height: 44px;
+}
+.main-div-text p{
+    font-size: 18px;
+    font-family: 'adobe-clean-reg';
+    line-height: normal;
+    margin-top: 27px;
+}
+#top-btn-div{
+    width: fit-content;
+    padding-right: 0;
+    margin-right: 0;
+}
+#top-link-div{
+    width: fit-content;
+    padding-top: 10px !important;
+    padding-left: 0;
+    margin-left: 16px;
+}
+#top-link-div a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.btn-main-div{
+    margin-top: 5px;
+    padding: 3px 15px 6px 15px;
+    font-size: 14px;
+    font-family: 'adobe-clean-bold';
+}
+
+
+/* Main Div Menu Styles */
+#main-div-menu{
+    z-index: 1;
+}
+#main-div-menu a{
+    font-family: 'adobe-clean';
+}
+#main-div-menu a:hover{
+    text-decoration: underline;
+}
+
+/* Main Div Last Styles*/
+#main-div-last{
+    padding: 40px 40px 50px 50px;
+}
+.inside-grid{
+    padding-top: 36px;
+    padding-left: 24px;
+    padding-right: 20px;
+    font-family: 'adobe-clean-bold';
+}
+.inside-grid p{
+    font-family: 'adobe-clean-reg';
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+.inside-grid a{
+    font-family: 'adobe-clean-semibold';
+    color: white;
+}
+.inside-grid a:hover{
+    text-decoration: underline;
+}
+#image-grid1, #image-grid2, #image-grid3{
+    cursor: pointer;
+}
+#image-grid1{
+    height: 500px;
+    background-image: url(https:\2f\2fs7d1.scene7.com\2fis\2fimage\2fTitanProd\2fsingle-desktop-3?$pjpeg$\26jpegSize=200\26wid=1260);
+    background-size: cover;
+    background-position-x: 51%;
+    background-position-y: 40%;
+    margin-right: 40px;
+}
+#image-grid2{
+    height: 500px;
+    background-image: url("images/Photography.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 40px;
+}
+#image-grid3{
+    height: 500px;
+    background-color: red;
+}
+#grid3-image{
+    width: 100%;
+    height: 353px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#grid3-image img{
+    max-height: 390px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* First Footer Div Styles*/
+.first-footer a{
+    font-size: 12px;
+    padding-bottom: 8px;
+    font-family: 'adobe-clean-reg';
+}
+.first-footer a:hover{
+    color: #727272;
+}
+.first-footer p{
+    font-family: 'adobe-clean-semibold';
+    font-size: 15px;
+    color:#656565;
+    margin-right: 32px;
+}
+.foot-acc-row label{
+    font-family: 'adobe-clean-semibold';
+    color: #434242;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.foot-acc-row li{
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+#accordion-footer{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#accordion-footer input[type="checkbox"]{
+    display:none;
+}
+.accordion-icon{
+    visibility: hidden;
+    display: none;
+}
+
+/* Logo Footer Div Styles*/
+#footer-logo{
+    margin-top: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#footer-logo label{
+    margin-right: 30px;
+}
+
+/* Final Footer Div Styles*/
+#final-footer{
+    padding: 40px 10px 20px 20px;
+}
+#final-footer a:hover{
+    color: #999999;
+}
+#final-footer-col1{
+    padding-bottom: 15px;
+}
+#region-button{
+    width: fit-content;
+}
+#foot-acc-item{
+    width: fit-content;
+}
+#region-row-md{
+    display: none;
+}
+/* Final Footer Modal Div */
+.modal, .modal-dialog, .modal-content, .modal-body{
+    border-radius: 0 !important;
+}
+.modal-body{
+    padding: 5px 10px 20px 30px;
+    overflow-x: hidden;
+}
+.modal-dialog{
+    width: 80% !important;
+}
+#close-region {
+    width: 18px;
+    height: 18px;
+    background-image: url(images/icons8-cancel-48.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+.modal-body .col{
+    padding-right: 0;
+}
+.modal-body h3{
+    font-family: 'adobe-clean-bold';
+}
+.modal-body p{
+    font-family: 'adobe-clean-reg';
+    font-size: 16px;
+}
+.modal-body h6{
+    font-family: 'adobe-clean-bold';
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.modal-body a{
+    font-family: 'adobe-clean-reg';
+    font-size: 14px;
+    color: #1473e6;
+}
+.modal-body a:hover{
+    text-decoration: underline;
+    color: #1473e6 !important;
+}
+
+#div-socials{
+    padding-left: 15px;
+}
+#div-socials a{
+    color:#777777;
+    font-size: 15px;
+}
+#text-copyright{
+    color: #777777;
+}
+#colof-privacy{
+    width: fit-content !important;
+}
